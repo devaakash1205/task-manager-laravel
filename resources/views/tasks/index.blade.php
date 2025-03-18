@@ -46,7 +46,7 @@
                     <button class="btn btn-info" id="viewAllTasksBtn">View All Tasks</button>
                 </div>
 
-                <table class="table table-striped mt-4">
+                <table class="table table-striped mt-4 text-white">
                     <thead>
                         <tr>
                             <th>Task</th>
@@ -197,9 +197,9 @@
 
                 $("#taskList").append(`
                     <tr data-task-id="${task.id}" class="${textClass}">
-                        <td>${task.title}</td>
+                        <td class="text-white">${task.title}</td>
                         <td><input type="checkbox" class="markComplete" data-id="${task.id}" ${isCompleted}></td>
-                        <td><button class="btn btn-danger btn-sm deleteTask" data-id="${task.id}">&times;</button></td>
+                        <td><button class="deleteTask" data-id="${task.id}">&times;</button></td>
                     </tr>
                 `);
             }
